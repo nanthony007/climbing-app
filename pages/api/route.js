@@ -1,8 +1,7 @@
 const { MongoClient } = require('mongodb');
 
 // must remove connection string
-const uri =
-	'mongodb+srv://climbingUser:USA61kilos!@serverlessinstance0.eeolo.mongodb.net/sports?retryWrites=true&w=majority';
+const uri = process.env.MONGO_URI;
 const client = new MongoClient(uri);
 
 async function routeSubmit(req, res) {
