@@ -31,7 +31,7 @@ export default function HomeHeader(mongo) {
 		);
 	}
 	return (
-		<div className="flex flex-col items-center justify-center min-h-screen py-2">
+		<div className="flex flex-col items-center justify-center py-2">
 			<Head>
 				<title>The Climbing Game</title>
 				<link rel="icon" href="/favicon.ico" />
@@ -47,11 +47,10 @@ export default function HomeHeader(mongo) {
 					<Link href="/game">PLAY</Link>
 				</div>
 				{/*  these need to collapse on each other on md viewport */}
-				<div className="mt-5 px-5 xs:w-11/12 lg:w-4/5">
+				<div className="flex flex-col items-center justify-center mt-5 px-5 w-screen">
 					<LeaderChart data={mongo.data}></LeaderChart>
 					<Leaderboard data={mongo.data}></Leaderboard>
 				</div>
-				{/* want to add chart and leader board table here */}
 			</main>
 
 			<footer className="flex items-center justify-center w-full h-24 border-t">
