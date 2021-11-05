@@ -33,7 +33,7 @@ function LeaderChart(data) {
 					],
 				}}
 				options={options}
-				height="100"
+				className="w-screen"
 			/>
 		</div>
 	);
